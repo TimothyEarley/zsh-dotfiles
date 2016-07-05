@@ -10,6 +10,9 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='fg=39'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
 
+# Comment colour
+ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
+
 
 # SDKMAN
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
