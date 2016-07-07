@@ -1,4 +1,5 @@
 alias la='ls -la --color=auto'
+alias ls='ls -l --color=auto'
 
 # k is nice, but kinda broken (LS_COLORS, \ in directory messes things up)
 #alias la='k -Ah'
