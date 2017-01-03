@@ -15,9 +15,14 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
 
 
 # SDKMAN
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # Remove user prompt for default user
 DEFAULT_USER='timmy'
+
+# Editor
+export EDITOR="/bin/micro"
+
+# Allow to cd into folders from home dir from anywhere
+export CDPATH=$CDPATH:~

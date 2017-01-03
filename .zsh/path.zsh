@@ -1,9 +1,20 @@
-# dot(file) commands
-export PATH=~/.dotfiles/bin/:$PATH
-
-# Android
+#! bin/zsh
 export ANDROID_HOME=${HOME}/Android/Sdk
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-# scripts
-export PATH=~/.scripts/:$PATH
+paths=(
+	# dot(file) commands
+	~/.dotfiles/bin/
+	# Android
+	$ANDROID_HOME/tools
+	$ANDROID_HOME/platform-tools
+	# scripts
+	~/.scripts/
+	# ruby gems
+	$(ruby -e 'print Gem.user_dir')/bin
+)
+
+for p in $paths
+do
+	export PATH=$PATH:$p
+done
+

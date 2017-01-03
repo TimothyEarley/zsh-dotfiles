@@ -1,5 +1,7 @@
-alias la='ls -la --color=auto'
-alias ls='ls -l --color=auto'
+alias la='ls -lah --color=auto'
+alias ls='ls --color=auto'
+
+alias o='rifle'
 
 # k is nice, but kinda broken (LS_COLORS, \ in directory messes things up)
 #alias la='k -Ah'
@@ -23,3 +25,8 @@ alias rm='trash-put'
 # cp progress
 alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 
+#git
+alias cgr='cd $(git rev-parse --show-toplevel || echo ".")'
+
+#clipboard
+alias xclip="xclip -selection c"
