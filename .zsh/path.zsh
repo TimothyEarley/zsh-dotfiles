@@ -11,6 +11,8 @@ paths=(
 	~/.scripts/
 	# ruby gems
 	$(ruby -e 'print Gem.user_dir')/bin
+	# CUDA
+	/opt/cuda/bin
 )
 
 for p in $paths
