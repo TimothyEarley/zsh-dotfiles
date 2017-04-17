@@ -1,6 +1,3 @@
-# load zgen
-source ${HOME}/.zgen/zgen.zsh
-
 # load all config files in ~/.zsh
 for config_file (${HOME}/.zsh/*.zsh); do
 #	echo "Loading $config_file"
