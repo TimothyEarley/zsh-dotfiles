@@ -30,3 +30,6 @@ alias cgr='cd $(git rev-parse --show-toplevel || echo ".")'
 
 #clipboard
 alias xclip="xclip -selection c"
+
+# fuzzy find recently used dirs
+alias j='cd $(_z -l 2>&1 | fzf -s --tac | sed "s/[0-9,.]* *//")'
