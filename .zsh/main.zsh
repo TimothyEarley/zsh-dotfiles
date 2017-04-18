@@ -26,3 +26,7 @@ export EDITOR="/bin/micro"
 
 # Allow to cd into folders from home dir from anywhere
 export CDPATH=$CDPATH:~
+
+# completions for hidden files
+# compinit
+_comp_options+=(globdots)
