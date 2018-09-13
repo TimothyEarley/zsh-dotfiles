@@ -13,6 +13,11 @@ paths=(
 	$(ruby -e 'print Gem.user_dir')/bin
 	# CUDA
 	/opt/cuda/bin
+	# Zplug failed
+	~/.zplug/bin
+	# Perl6
+	/usr/share/perl6/site/bin
+	/usr/share/perl6/vendor/bin
 )
 
 for p in $paths

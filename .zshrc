@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # load all config files in ~/.zsh
 for config_file (${HOME}/.zsh/*.zsh); do
 #	echo "Loading $config_file"

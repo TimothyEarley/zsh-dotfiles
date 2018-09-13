@@ -13,11 +13,6 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
 # Comment colour
 ZSH_HIGHLIGHT_STYLES[comment]='fg=white'
 
-
-# SDKMAN
-export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
-
 # Remove user prompt for default user
 DEFAULT_USER='timmy'
 
@@ -30,3 +25,20 @@ export CDPATH=$CDPATH:~
 # completions for hidden files
 # compinit
 _comp_options+=(globdots)
+
+# if littler is installed, disable the shell builtin r
+if [ -e /usr/bin/r ]; then
+	disable r
+fi
+
+# allow comments in interactive
+setopt interactivecomments
+
+# auto cd
+setopt auto_cd
+
+# expand in prompt
+setopt prompt_subst
+
+# disable . and .. in tab completion
+zstyle ':completion:*' special-dirs false
