@@ -10,9 +10,9 @@ paths=(
 	# scripts
 	~/.scripts/
 	# ruby gems
-	$(ruby -e 'print Gem.user_dir')/bin
+	# $(ruby -e 'print Gem.user_dir')/bin
 	# CUDA
-	/opt/cuda/bin
+	# /opt/cuda/bin
 	# Zplug failed
 	~/.zplug/bin
 	# Perl6

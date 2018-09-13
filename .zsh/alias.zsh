@@ -11,10 +11,10 @@ alias o='rifle'
 
 # fuck fixes the last command
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 # eval "$(thefuck --alias FUCK)"
-alias fu='fuck'
+#alias fu='fuck'
 
 
 # ANTLR
