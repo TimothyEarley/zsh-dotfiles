@@ -1,10 +1,14 @@
 #alias la='ls -lah --color=auto'
 #alias ls='ls --color=auto'
 
-alias la='lai-go'
-#alias ls='lsi-go'
-
-alias o='rifle'
+if type exa > /dev/null; then
+	alias la='exa -lah --git  --no-permissions -F --icons --group-directories-first'
+else
+	alias la='lai-go'
+	#alias ls='lsi-go'
+fi
+# alias o='rifle'
+#alias o='xdg-open'
 
 # k is nice, but kinda broken (LS_COLORS, \ in directory messes things up)
 #alias la='k -Ah'
@@ -67,3 +71,27 @@ alias srt='cd $(svn info --show-item=wc-root)'
 
 # Remove removed  files from svn
 # alias cleanSVN='svn status | grep "^!" | awk "{print $2}" | xargs svn delete'
+
+# Spark (for some strange reason cannot handle 256color)
+alias spark-shell="TERM=xterm-color spark-shell"
+
+#cd to file
+#if [ -z "$(alias cd)" ]; then
+#	alias cd='f() { if [ -f "$1" ]; then cd $(dirname "$1"); else cd $@; fi };f'
+#fi
+
+
+# because PCRE is best
+alias perlSed='perl -pe'
+
+# docke start / stop
+alias dockerStart='sudo systemctl start docker'
+alias dockerStop='sudo systemctl stop docker'
+
+#Terraform
+alias terra="terraform"
+
+#Gradle
+alias gradle='gradle-or-gradlew --console=verbose'
+
+alias ip='ip -c '
