@@ -10,8 +10,6 @@ paths=(
 	$ANDROID_HOME/platform-tools
 	# scripts
 	~/.scripts/
-	# ruby gems
-	$(ruby -e 'print Gem.user_dir')/bin
 	# CUDA
 	# /opt/cuda/bin
 	# Zplug failed
@@ -23,7 +21,15 @@ paths=(
 	~/.kube/plugins
 	# Install location for stack (Haskell)
 	~/.local/bin
+	# Jetbrains Toolbox
+	~/.local/share/JetBrains/Toolbox/scripts
 )
+
+# why is type so slow?
+if type ruby > /dev/null; then
+	# ruby gems
+	paths+=($(ruby -e 'print Gem.user_dir')/bin)
+fi
 
 for p in $paths
 do

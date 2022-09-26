@@ -1,12 +1,14 @@
-#alias la='ls -lah --color=auto'
-#alias ls='ls --color=auto'
-
 if type exa > /dev/null; then
 	alias la='exa -lah --git  --no-permissions -F --icons --group-directories-first'
-else
+elif [[ -f ~/.scripts/lai-go ]]; then
 	alias la='lai-go'
 	#alias ls='lsi-go'
+else
+	echo "Falling back to simple ls, install exa for a nice listing"
+	alias la='ls -lah --color=auto'
 fi
+alias ls='ls --color=auto'
+
 # alias o='rifle'
 #alias o='xdg-open'
 
@@ -95,3 +97,6 @@ alias terra="terraform"
 alias gradle='gradle-or-gradlew --console=verbose'
 
 alias ip='ip -c '
+
+# Rover (https://github.com/im2nguyen/rover)
+alias rover='docker run --rm -it -p 9000:9000 -v $(pwd):/src im2nguyen/rover'
